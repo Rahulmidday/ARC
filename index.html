@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Doctor Appointment System</h1>
+    </header>
+    
+    <main>
+        <section id="user-type">
+            <h2>Are you a Doctor or a Patient?</h2>
+            <button id="doctor-button">Doctor</button>
+            <button id="patient-button">Patient</button>
+        </section>
+
+        
+            <!-- Doctor registration form -->
+            <section id="doctor-registration" class="hidden">
+                <h2>Doctor Registration</h2>
+                <form id="doctor-form">
+                    <label for="doctor-name">Name:</label>
+                    <input type="text" id="doctor-name" required>
+                    
+                    <label for="doctor-email">Email:</label>
+                    <input type="email" id="doctor-email" required>
+                    
+                    <label for="doctor-specialty">Specialty:</label>
+                    <input type="text" id="doctor-specialty" required>
+                    
+                    <label for="doctor-location">Location:</label>
+                    <input type="text" id="doctor-location" required>
+                    
+                    <button type="submit">Register as Doctor</button>
+                </form>
+            </section>
+            
+    
+             <!-- patient registration form -->
+            <section id="patient-registration" class="hidden">
+                <h2>Patient Registration</h2>
+                <form id="patient-form">
+                    <label for="patient-name">Name:</label>
+                    <input type="text" id="patient-name" required>
+                    
+                    <label for="patient-email">Email:</label>
+                    <input type="email" id="patient-email" required>
+                    
+                    <label for="patient-age">Age:</label>
+                    <input type="number" id="patient-age" required>
+                    
+                    <label for="patient-gender">Gender:</label>
+                    <select id="patient-gender" required>
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    
+                    <button type="submit">Register as Patient</button>
+                </form>
+            </section>
+            
+        <section id="location" class="hidden">
+            <h2> Current Location</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap" async defer></script>
+   
+</body>
+</html>
